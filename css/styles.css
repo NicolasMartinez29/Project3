@@ -1,0 +1,637 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, table {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    justify-content: space-between; /* Asegura que el contenido ocupe toda la altura disponible */
+}
+
+/* Container for alignment */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #2c3e50; /* Color oscuro para el header */
+    color: #ecf0f1;
+    padding-top: 10px;
+    position: relative;
+}
+
+/* Contenedor para el logo y el texto */
+.logo-text-container {
+    display: flex;
+    justify-content: flex-start; /* Logo y texto alineados a la izquierda */
+    align-items: center;
+}
+
+.logo img {
+    border-radius: 30px;
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+/* Ajustar texto a la izquierda */
+.text {
+    flex-grow: 0.8;  /* Hace que el texto ocupe todo el espacio restante */
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 2.5rem;
+    color: #ecf0f1;
+    margin: 0;
+}
+
+/* Elimina el margen entre el header y el nav */
+nav ul {
+    background-color: #34495e; /* Un color ligeramente más claro que el header */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    border-radius: 5px; /* Bordes redondeados en el contenedor del nav */
+}
+
+/* Estilo para cada item del menú */
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* Necesario para colocar el borde en el hover */
+}
+
+/* Enlaces del nav */
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px; /* Agrega espacio alrededor del texto */
+    display: inline-block;
+    transition: color 0.3s, background-color 0.3s; /* Para animar el cambio de color */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Efecto de borde al pasar el mouse */
+nav ul li a:hover {
+    color: #3498db; /* Cambia el color del texto al pasar el mouse */
+    background-color: #ecf0f1; /* Fondo blanco cuando se pasa el mouse */
+}
+
+/* Bordes para cada item cuando el mouse pasa sobre él */
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #3498db; /* Color azul para el borde */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+/* Mostrar el borde cuando se pasa el mouse */
+nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Estilo de la tabla */
+.astronomy-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    background-color: #2c3e50;  /* Color de fondo oscuro para la tabla */
+    table-layout: auto; /* Cambiado a auto para mejor ajuste de las columnas */
+}
+
+.astronomy-table caption {
+    font-size: 1.8rem;
+    color: #000000e7;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.astronomy-table th, .astronomy-table td {
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño de las celdas */
+}
+
+.astronomy-table th {
+    background-color: #201864e7;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.astronomy-table tr:nth-child(even) {
+    background-color: #cceaffe7;  /* Fila alterna más oscura */
+}
+
+.astronomy-table tr:hover {
+    background-color: #1f2a35;  /* Efecto hover para resaltar la fila */
+}
+
+.astronomy-table td {
+    color: #180505; /* Texto claro en las celdas */
+    font-size: 1rem;
+}
+
+/* Main Content Styling */
+main {
+    padding: 40px 0;
+    flex: 1; /* Hace que el main ocupe el espacio restante */
+}
+
+/* Sección de Información del Espacio */
+.space-info {
+    padding: 40px 0;
+}
+
+.space-info__title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de columnas de texto */
+.space-info__columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.space-info__left-column, .space-info__right-column {
+    width: 48%; /* Cada columna ocupa el 48% */
+}
+
+.space-info__text {
+    font-size: 1.1rem;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Imagen debajo del texto */
+.space-info__image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    flex-shrink: 0; /* Evita que el footer se encoja */
+}
+
+/* Media Queries para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    /* Header - ocultar la imagen o hacerla parte del fondo */
+    header {
+        background-color: #2c3e50; /* Mantener el fondo */
+    }
+
+    .logo img {
+        max-width: 80px; /* Reducir tamaño de imagen */
+    }
+
+    .logo-text-container {
+        flex-direction: column; /* Logo y texto apilados verticalmente */
+        align-items: center;
+    }
+
+    .text {
+        text-align: center; /* Asegurar que el texto esté centrado */
+    }
+
+    /* Menú de navegación en una columna */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Separar los elementos del menú */
+    }
+
+    /* Sección de información - disposición de las columnas */
+    .space-info__columns {
+        flex-direction: column; /* Cambiar las columnas a una fila */
+        align-items: center;
+    }
+
+    .space-info__left-column, .space-info__right-column {
+        width: 100%; /* Las columnas ocupan el 100% del espacio */
+        margin-bottom: 20px; /* Separar las columnas */
+    }
+
+    .space-info__image {
+        width: 100%;
+    }
+
+    /* Tabla en pantallas pequeñas */
+    .astronomy-table th, .astronomy-table td {
+        display: block; /* Hacer las celdas bloques */
+        width: 100%;
+        padding: 8px; /* Reducir padding en las celdas */
+    }
+
+    .astronomy-table td {
+        text-align: right; /* Alinear el texto de las celdas a la derecha */
+    }
+
+    .astronomy-table caption {
+        font-size: 1.5rem; /* Ajustar el tamaño del caption */
+    }
+}
+
+/* Media Queries para pantallas muy pequeñas (móviles) */
+@media screen and (max-width: 480px) {
+    .text h1 {
+        font-size: 1.8rem; /* Reducir tamaño del texto */
+    }
+
+    .space-info__title {
+        font-size: 2rem; /* Reducir tamaño de título */
+    }
+
+    .space-info__text {
+        font-size: 1rem; /* Reducir tamaño de texto */
+    }
+
+    .space-info__image {
+        margin-top: 10px; /* Espacio reducido entre la imagen y el texto */
+    }
+
+    /* Asegurarse de que la tabla se vea bien en pantallas muy pequeñas */
+    .astronomy-table th, .astronomy-table td {
+        padding: 6px 10px; /* Reducir aún más el padding en pantallas muy pequeñas */
+    }
+}
+
+/* Estilo general de los campos del formulario */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto; /* Añadido margen superior e inferior */
+    border: 2px solid #3498db; /* Borde azul alrededor del formulario */
+    background-color: #ecf0f1; /* Fondo claro para el formulario */
+}
+
+fieldset {
+    border: none; /* Eliminar el borde del fieldset */
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff; /* Fondo blanco dentro de fieldset */
+}
+
+legend {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Estilo para los campos de texto y textarea */
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #3498db; /* Borde azul */
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f0f8ff; /* Fondo suave azul claro */
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilo de los botones de reset */
+button[type="reset"] {
+    background-color: #e74c3c;
+}
+
+button[type="reset"]:hover {
+    background-color: #c0392b;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    form {
+        padding: 15px;
+        width: 90%;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    form {
+        padding: 10px;
+        width: 95%;
+    }
+
+    fieldset {
+        padding: 10px;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+        font-size: 0.8rem;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+/* Estilo general de los campos del formulario */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto; /* Añadido margen superior e inferior */
+    border: 2px solid #3498db; /* Borde azul alrededor del formulario */
+    background-color: #ecf0f1; /* Fondo claro para el formulario */
+}
+
+/* Ajuste de padding y márgenes para centrado y distancia de las líneas de borde */
+fieldset {
+    border: none; /* Eliminar el borde del fieldset */
+    padding: 20px;
+    margin-bottom: 20px; /* Margen entre los fieldsets */
+    background-color: #ffffff; /* Fondo blanco dentro de fieldset */
+}
+
+/* Ajustar el margen entre los campos de entrada */
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+    width: 100%;
+    padding: 12px;  /* Aumentamos el padding dentro de los campos */
+    margin-bottom: 20px; /* Aumentar el margen entre los campos */
+    border: 2px solid #3498db; /* Borde azul */
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f0f8ff; /* Fondo suave azul claro */
+    box-sizing: border-box;  /* Asegura que el padding no se salga del tamaño */
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilo de los botones de reset */
+button[type="reset"] {
+    background-color: #e74c3c;
+}
+
+button[type="reset"]:hover {
+    background-color: #c0392b;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    form {
+        padding: 15px;
+        width: 90%;
+        margin: 20px auto;  /* Asegura que el formulario esté centrado */
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+        font-size: 0.9rem;
+        padding: 15px;  /* Aumentamos el padding de los campos para un espacio más cómodo */
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    form {
+        padding: 10px;
+        width: 95%;
+        margin: 10px auto;  /* Asegura que el formulario esté centrado */
+    }
+
+    fieldset {
+        padding: 10px;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+        font-size: 0.8rem;
+        padding: 12px;  /* Aumentar padding para mayor confort */
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Centrar el texto del título dentro del formulario */
+#form h2 {
+    text-align: center;  /* Centrar el texto */
+    font-size: 2rem;
+    color: #333;  /* Puedes cambiar el color si lo prefieres */
+    margin-bottom: 20px;
+}
+
+/* Centrar el contenedor del formulario */
+#form .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+/* Estilo específico para la página "What is a Galaxy" */
+
+/* Estilo para el título principal */
+#video h2 {
+    font-size: 3rem; /* Aumenta el tamaño de la letra */
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Estilo para los párrafos */
+#video p {
+    font-size: 1.2rem; /* Tamaño de letra más grande */
+    color: #000000;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Estilo de los elementos de lista (bullets) */
+#video ul {
+    list-style-type: none; /* Elimina los puntos predeterminados */
+    padding-left: 0;
+}
+
+#video ul li {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px; /* Espacio para los nuevos puntos */
+}
+
+#video ul li::before {
+    content: "•"; /* Usamos un punto más grande */
+    font-size: 1.8rem; /* Tamaño del punto */
+    color: #3498db; /* Color del punto */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Estilo del video */
+#video video {
+    display: block;
+    margin: 20px auto;
+    width: 100%; /* Ajustar el tamaño del video */
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+/* Estilo para los enlaces */
+#video a {
+    font-size: 1.2rem;
+    color: #3498db;
+    text-decoration: none;
+}
+
+#video a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer - Estilo del pie de página */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 1rem;
+}

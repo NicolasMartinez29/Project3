@@ -1,0 +1,39 @@
+WEBVTT
+
+NOTE
+Descriptions for Galaxy Video
+Student Name:
+File Name: galaxy-descriptions.vtt
+Date:
+
+1
+00:00:00.000 --> 00:00:05.000
+The screen shows an image of deep space, with many stars scattered in all directions.
+
+2
+00:00:05.500 --> 00:00:10.000
+As the camera moves forward, we see a large spiral galaxy with bright arms rotating toward the center.
+
+3
+00:00:10.500 --> 00:00:15.000
+At the center of the galaxy, a dark mass is visible, suggesting the presence of a supermassive black hole.
+
+4
+00:00:15.500 --> 00:00:20.000
+The camera moves to show a supernova exploding, a bright burst in space surrounded by gas and dust.
+
+5
+00:00:20.500 --> 00:00:25.000
+A nebula appears, with clouds of brightly colored gas illuminating the surrounding space.
+
+6
+00:00:25.500 --> 00:00:30.000
+As the video progresses, the image of the galaxy zooms out, showing its full spiral shape from a wider perspective.
+
+7
+00:00:30.500 --> 00:00:35.000
+A visualization of a cluster of young stars forming inside an interstellar gas cloud.
+
+8
+00:00:35.500 --> 00:00:40.000
+The screen briefly darkens, then a panorama of the Milky Way appears, with stars shining against a deep black background.
